@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "board.h": "c",
+        "usbtmc_app.h": "c",
+        "main.h": "c",
+        "string.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "fonts.h": "c",
+        "gpio.h": "c",
+        "st7735s.h": "c",
+        "stdlib.h": "c"
+    }
+}
