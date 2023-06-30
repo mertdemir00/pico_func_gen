@@ -11,6 +11,7 @@
 
 uint8_t out_buffer[BUF_SIZE]; // A few packets long should be enough.
 static size_t buffer_len;
+extern uint8_t freq_digits[];
 
 struct Command{
     const char *first_word;
@@ -80,6 +81,10 @@ static void freq_command(const uint8_t* args)
     set_freq(freq);
     char freqtxt[15];
     sniprintf(freqtxt,14, "FREQ: %07d",freq);
+    int i = 0;
+    for(i = 0; i < 7; i++){
+        freq_digits[i] = freqtxt[6 + i] - '0';
+    }
     setColor(0,0,0);
     filledRect(80,33,160,56);
     setColor(31,63,31);
